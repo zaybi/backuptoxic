@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "models",
+  "info": {
+    "name": "Model"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": false
+    },
+    "email": {
+      "type": "email"
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "about": {
+      "type": "text"
+    },
+    "height": {
+      "type": "decimal"
+    },
+    "chest": {
+      "type": "decimal"
+    },
+    "waist": {
+      "type": "decimal"
+    },
+    "hips": {
+      "type": "decimal"
+    },
+    "dress": {
+      "type": "string"
+    },
+    "shoes": {
+      "type": "string"
+    },
+    "hairColor": {
+      "type": "string"
+    },
+    "eyeColor": {
+      "type": "string"
+    },
+    "pronoun": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "gender": {
+      "via": "models",
+      "model": "gender"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "requests",
+  "info": {
+    "name": "request"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "dataOfBirth": {
+      "type": "date"
+    },
+    "about": {
+      "type": "text"
+    },
+    "height": {
+      "type": "decimal"
+    },
+    "chest": {
+      "type": "decimal"
+    },
+    "waist": {
+      "type": "decimal"
+    },
+    "hips": {
+      "type": "decimal"
+    },
+    "dress": {
+      "type": "string"
+    },
+    "shoes": {
+      "type": "string"
+    },
+    "hairColor": {
+      "type": "string"
+    },
+    "eyeColor": {
+      "type": "string"
+    },
+    "pronoun": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "country": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "genders",
+  "info": {
+    "name": "Gender"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "models": {
+      "collection": "model",
+      "via": "gender"
+    }
+  }
+}
